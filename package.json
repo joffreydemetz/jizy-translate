@@ -1,24 +1,10 @@
 {
   "name": "jizy-translate",
-  "version": "2.1.1",
+  "version": "2.1.5",
   "browser": "dist/js/jizy-translate.min.js",
   "main": "lib/index.js",
   "type": "module",
   "jizy": "dist/",
-  "files": [
-    "dist/*",
-    "lib/*"
-  ],
-  "scripts": {
-    "jpack:export": "node ./cli/jpack.js --action build --name perso",
-    "jpack:export-debug": "node ./cli/jpack.js --action build --name perso --debug",
-    "jpack:dist": "node ./cli/jpack.js",
-    "jpack:dist-debug": "node ./cli/jpack.js --debug"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joffreydemetz/jizy-translate.git"
-  },
   "keywords": [
     "jizy",
     "translate"
@@ -26,7 +12,19 @@
   "author": "Joffrey Demetz <joffrey.demetz@gmail.com> (https://joffreydemetz.com/)",
   "license": "MIT",
   "description": "A simple JS translator.",
-  "dependencies": {
-    "jizy-packer": "^2.1.0"
+  "homepage": "https://jizy.joffreydemetz.com/jizy-translate",
+  "files": [
+    "dist/*",
+    "lib/*"
+  ],
+  "scripts": {
+    "jpack:dist": "node ./cli/jpack.js"
+    },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joffreydemetz/jizy-translate.git"
+  },
+  "devDependencies": {
+    "jizy-packer": "^2.1.44"
   }
 }
