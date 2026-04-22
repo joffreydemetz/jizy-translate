@@ -1,6 +1,6 @@
 {
   "name": "jizy-translate",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "browser": "dist/js/jizy-translate.min.js",
   "main": "lib/index.js",
   "type": "module",
@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "jpack:dist": "node ./cli/jpack.js"
-    },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joffreydemetz/jizy-translate.git"
