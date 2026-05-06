@@ -4,7 +4,6 @@
   "browser": "dist/js/jizy-translate.min.js",
   "main": "lib/index.js",
   "type": "module",
-  "jizy": "dist/",
   "keywords": [
     "jizy",
     "translate"
