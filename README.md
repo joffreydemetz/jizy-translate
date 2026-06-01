@@ -21,7 +21,7 @@ Defines a `jTranslate` class for managing multiple languages and switching betwe
 ## Usage Example
 
 ```js
-import jTranslate from './lib/js/translate.js';
+import jTranslate from 'jizy-translate';
 
 const translations = {
 	EN: { HELLO: "Hello", BYE: "Goodbye" },
