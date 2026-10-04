@@ -133,3 +133,24 @@ describe('get / set', () => {
         expect(t.set('a', 'A')).toBe(t);
     });
 });
+
+describe('empty translator', () => {
+    test('get() falls back to the default text, then the key', () => {
+        const t = new jTranslate(null, 'fr');
+        expect(t.get('CLOSE')).toBe('CLOSE');
+        expect(t.get('CLOSE', 'Fermer')).toBe('Fermer');
+    });
+
+    test('get() with another language loaded but not the default one', () => {
+        const t = new jTranslate(null, 'fr');
+        t.addTranslations('en', { CLOSE: 'Close' });
+        expect(t.get('CLOSE')).toBe('CLOSE');
+    });
+
+    test('set() creates the default language on first use', () => {
+        const t = new jTranslate(null, 'fr');
+        t.set('CLOSE', 'Fermer');
+        expect(t.hasLanguage('fr')).toBe(true);
+        expect(t.get('CLOSE')).toBe('Fermer');
+    });
+});
